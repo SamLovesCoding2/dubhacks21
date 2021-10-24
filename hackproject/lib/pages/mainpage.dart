@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_spinning_wheel/flutter_spinning_wheel.dart';
 import 'package:hackproject/pages/baby.dart';
-import 'package:hackproject/pages/questions.dart';
+import 'package:hackproject/pages/misc.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -16,6 +16,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   _WheelState w = new _WheelState();
+
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
@@ -150,7 +151,6 @@ class Wheel extends StatefulWidget {
 class _WheelState extends State<Wheel> {
   double _randomAngle() => Random().nextDouble() * pi * 2;
   double _randomVelocity() => (Random().nextDouble() * 6000) + 2000;
-  int index = -1;
   // ignore close_sinks
   final StreamController _dividerController = StreamController<int>();
   // ignore close_sinks
@@ -191,7 +191,6 @@ class _WheelState extends State<Wheel> {
                 child: StreamBuilder(
                   stream: _dividerController.stream,
                   builder: (c, s) {
-                    index = int.parse(s.data.toString());
                     return s.hasData
                         ? DisplayResult(int.parse(s.data.toString()))
                         : Container();
@@ -243,16 +242,16 @@ class DisplayResult extends StatelessWidget {
   final int selected;
   DisplayResult(this.selected, {Key? key}) : super(key: key);
   final Map<int, String> labels = {
-    1: 'Money',
-    2: 'Cook',
+    1: 'Misc.',
+    2: 'Career',
     3: 'Misc.',
-    4: 'Car Care',
-    5: 'Sustainability',
-    6: 'Self-care',
-    7: 'First-aid',
-    8: 'friends',
-    9: 'insurance',
-    10: 'career',
+    4: 'Cook',
+    5: 'Misc.',
+    6: 'First-aid',
+    7: 'Misc.',
+    8: 'Misc.',
+    9: 'Car Care',
+    10: 'Misc.',
   };
 
   @override

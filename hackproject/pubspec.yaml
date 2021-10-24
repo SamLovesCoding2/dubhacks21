@@ -64,6 +64,7 @@ flutter:
     - assets/Baby_2.png
     - assets/childhalff_1.png
     - assets/blankchild.png
+    - assets/progressbar1.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

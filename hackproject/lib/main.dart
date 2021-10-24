@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'AdultHack',
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: Baby(),
+        body: MainPage(),
       ),
     );
   }

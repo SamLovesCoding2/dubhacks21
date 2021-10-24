@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
+import 'dart:isolate';
+//import 'package:image/image.dart';
 
 class Baby extends StatefulWidget {
   const Baby({Key? key}) : super(key: key);
@@ -44,21 +47,27 @@ class _BabyState extends State<Baby> {
                   Container(
                     width: 150,
                     alignment: Alignment.center,
-                    padding: const EdgeInsets.all(10),                    
-                    margin: const EdgeInsets.only(top: 30, bottom: 50),
+                    padding: const EdgeInsets.only(top: 5, right: 10, left: 10),
+                    margin: const EdgeInsets.only(top: 5, bottom: 10),
                     child: const Text(
                       'Baby: Level 1',//$_levelDescript,
                       style: TextStyle(color: Color(0xffFFFFFF), fontSize: 20, fontFamily: 'Roboto'),
                     ),
                   ),
                   Container(
-                    width: 150,
                     alignment: Alignment.center,
-                    padding: const EdgeInsets.all(10),
-                    margin: const EdgeInsets.only(top: 30, bottom: 50),
+                    margin: const EdgeInsets.only(top: 10, bottom: 50),
                     child: const Text(
-                      'Get more questions correct to become a well seasoned adult!',
-                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 12, fontFamily: 'Roboto'),
+                      'Get more questions correct to become a well-seasoned adult!',
+                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 13, fontFamily: 'Roboto'),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 10, bottom: 50),
+                    child: Text(
+                      'Get more questions correct to become a well-seasoned adult!',
+                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 13, fontFamily: 'Roboto'),
                     ),
                   ),
                 ]

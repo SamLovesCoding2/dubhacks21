@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/mainpage.dart';
+import 'pages/questions.dart';
 import 'package:flutter/services.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'AdultHack',
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: MainPage(),
+        body: QuestionsPage(),
       ),
     );
   }

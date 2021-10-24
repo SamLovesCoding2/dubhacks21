@@ -1,0 +1,231 @@
+import 'package:flutter/material.dart';
+import 'package:hackproject/pages/baby.dart';
+
+class QuestionsPage extends StatefulWidget {
+  const QuestionsPage({Key? key}) : super(key: key);
+
+  @override
+  _QuestionsPageState createState() => _QuestionsPageState();
+}
+
+class _QuestionsPageState extends State<QuestionsPage> {
+  @override
+  Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: _size.width,
+      height: _size.height,
+      child: Container(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.black,
+                offset: Offset(0, -10),
+                blurRadius: 20,
+                spreadRadius: 0)
+          ],
+          color: Color(0xffD37373),
+        ),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Center(
+              child: Column(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 30, bottom: 50),
+                    child: const Text(
+                      "Miscellaneous",
+                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 40, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 30, bottom: 50),
+                    child: const Text(
+                      "Which national elections should you vote in?",
+                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 25, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 170,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
+                          color: const Color(0xffD0CFF3),
+                        ),
+                        child: const Text(
+                          "Choice 1",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 170,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
+                          color: const Color(0xffD0F3CF),
+                        ),
+                        child: const Text(
+                          "Choice 2",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 170,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
+                          color: const Color(0xffF3EDCF),
+                        ),
+                        child: const Text(
+                          "Choice 3",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 170,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
+                          color: const Color(0xffF3CFEB),
+                        ),
+                        child: const Text(
+                          "Choice 4",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 50, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 130,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
+                          color: const Color(0xffF3CFCF),
+                        ),
+                        child: const Text(
+                          "Submit",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15, fontWeight: FontWeight.bold, fontFamily: 'Roboto'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

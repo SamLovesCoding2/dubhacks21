@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_spinning_wheel/flutter_spinning_wheel.dart';
+//import 'package:flutter_spinning_wheel/flutter_spinning_wheel.dart';
 import 'package:hackproject/pages/baby.dart';
 import 'package:hackproject/pages/questions.dart';
 
@@ -40,7 +40,7 @@ class _MainPageState extends State<MainPage> {
                     alignment: Alignment.center,
                     margin: const EdgeInsets.only(top: 30, bottom: 50),
                     child: const Text(
-                      "THE TITLE",
+                      "GrowNUp",
                       style: TextStyle(color: Color(0xffFFFFFF), fontSize: 40),
                     ),
                   ),
@@ -191,10 +191,10 @@ class _WheelState extends State<Wheel> {
       height: 500,
       alignment: Alignment.center,
       child: Scaffold(
-        body: SpinningWheel(
-          Image.asset('assets/spinner.png'),
+        //body: SpinningWheel(
+          //Image.asset('assets/spinner.png'),
         ),
-      ),
-    );
+      );
+    
   }
 }

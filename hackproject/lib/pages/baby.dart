@@ -43,7 +43,10 @@ class _BabyState extends State<Baby> {
                       style: TextStyle(color: Color(0xffFFFFFF), fontSize: 30, fontFamily: 'Roboto', fontWeight: FontWeight.bold,),
                     ),
                   ),
-                  //make img for baby
+                  Container(
+                    width: _size.width /4 *3,
+                    child: Image.asset('assets/Baby_2.png'),
+                  ),
                   Container(
                     width: 150,
                     alignment: Alignment.center,
@@ -63,18 +66,47 @@ class _BabyState extends State<Baby> {
                     ),
                   ),
                   Container(
-                    alignment: Alignment.center,
-                    margin: const EdgeInsets.only(top: 10, bottom: 50),
-                    child: Text(
-                      'Get more questions correct to become a well-seasoned adult!',
-                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 13, fontFamily: 'Roboto'),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: _size.width / 10,
+                          padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10),
+                          child: Image.asset('Baby_2.png'),
+                        ),
+                        Container(
+                          width: _size.width / 10,
+                          padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10),
+                          child: Image.asset('blankchild.png'),
+                        )
+                        ,Container(
+                          width: _size.width / 10,
+                          padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10),
+                          child: Image.asset('../assets/blankteenager.png'),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    child: Row(
+                      children: [
+                        Container(
+                          width: _size.width / 10,
+                          child: Image.asset('assets/blankadult.png'),
+                           
+                        ),
+                        Container(
+                          width: _size.width / 10,
+                          child: Image.asset('assets/blankold.png'),
+                        ),
+                        Container(
+                          width: _size.width / 10,
+                          child: Image.asset('assets/blankolder.png'),
+                        ),
+                      ],
                     ),
                   ),
                 ]
-              ),
-
-                    
-                      
+              ),  
             ),
           ],
         ),

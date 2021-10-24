@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return const MaterialApp(
-      title: 'AdultHack',
+      title: 'GrowNUp',
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: MainPage(),
+        body: Baby(),
       ),
     );
   }

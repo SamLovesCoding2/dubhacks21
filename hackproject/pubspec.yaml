@@ -1,3 +1,35 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@bgreydinger 
+SamLovesCoding2
+/
+dubhacks21
+Private
+1
+0
+0
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+dubhacks21/hackproject/pubspec.yaml
+@SamLovesCoding2
+SamLovesCoding2 yaml
+Latest commit 145b4d7 41 seconds ago
+ History
+ 2 contributors
+@SamLovesCoding2@bgreydinger
+96 lines (84 sloc)  3.88 KB
+   
 name: hackproject
 description: A new Flutter project.
 
@@ -33,7 +65,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  flutter_spinning_wheel: ^1.1.0
+  flutter_spinning_wheel: any
 
 dev_dependencies:
   flutter_test:
@@ -56,14 +88,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - lib/assets/spinner.png
-    - lib/assets/blankoldest.png
-    - lib/assets/blankold.png
-    - lib/assets/blankadult.png
-    - lib/assets/blankteenager.png
-    - lib/assets/Baby_2.png
-    - lib/assets/childhalff_1.png
-    - lib/assets/blankchild.png
+    - assets/spinner.png
+    - assets/blankoldest.png
+    - assets/blankold.png
+    - assets/blankadult.png
+    - assets/blankteenager.png
+    - assets/Baby_2.png
+    - assets/childhalff_1.png
+    - assets/blankchild.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
@@ -94,3 +126,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

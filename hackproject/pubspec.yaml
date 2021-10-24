@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@bgreydinger 
-SamLovesCoding2
-/
-dubhacks21
-Private
-1
-0
-0
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-dubhacks21/hackproject/pubspec.yaml
-@SamLovesCoding2
-SamLovesCoding2 yaml
-Latest commit 145b4d7 41 seconds ago
- History
- 2 contributors
-@SamLovesCoding2@bgreydinger
-96 lines (84 sloc)  3.88 KB
-   
 name: hackproject
 description: A new Flutter project.
 
@@ -126,15 +94,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

@@ -63,14 +63,7 @@ class _MiscQuestionState extends State<MiscQuestion> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(top: 20, bottom: 20),
                       child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Baby(),
-                            ),
-                          );
-                        },
+                        onPressed: null,
                         child: Container(
                           width: 170,
                           alignment: Alignment.center,
@@ -97,14 +90,7 @@ class _MiscQuestionState extends State<MiscQuestion> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(top: 20, bottom: 20),
                       child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Baby(),
-                            ),
-                          );
-                        },
+                        onPressed: null,
                         child: Container(
                           width: 170,
                           alignment: Alignment.center,
@@ -131,14 +117,7 @@ class _MiscQuestionState extends State<MiscQuestion> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(top: 20, bottom: 20),
                       child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Baby(),
-                            ),
-                          );
-                        },
+                        onPressed: null,
                         child: Container(
                           width: 170,
                           alignment: Alignment.center,
@@ -165,14 +144,7 @@ class _MiscQuestionState extends State<MiscQuestion> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(top: 20, bottom: 20),
                       child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Baby(),
-                            ),
-                          );
-                        },
+                        onPressed: null,
                         child: Container(
                           width: 170,
                           alignment: Alignment.center,
@@ -199,14 +171,7 @@ class _MiscQuestionState extends State<MiscQuestion> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(top: 50, bottom: 20),
                       child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Baby(),
-                            ),
-                          );
-                        },
+                        onPressed: null,
                         child: Container(
                           width: 130,
                           alignment: Alignment.center,

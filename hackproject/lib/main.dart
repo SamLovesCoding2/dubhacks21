@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/mainpage.dart';
 import 'package:flutter/services.dart';
+import 'pages/baby.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'AdultHack',
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: MainPage(),
+        body: Baby(),
       ),
     );
   }

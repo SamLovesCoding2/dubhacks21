@@ -44,7 +44,7 @@ class _MainPageState extends State<MainPage> {
                     alignment: Alignment.center,
                     margin: const EdgeInsets.only(top: 30, bottom: 50),
                     child: const Text(
-                      "THE TITLE",
+                      "GrowNUp",
                       style: TextStyle(color: Color(0xffFFFFFF), fontSize: 40),
                     ),
                   ),

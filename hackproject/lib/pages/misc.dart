@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hackproject/pages/baby.dart';
 
+/*This is the question page for one of the miscellaneous questions as the demo*/
 class MiscQuestion extends StatefulWidget {
   const MiscQuestion({Key? key}) : super(key: key);
 

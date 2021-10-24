@@ -1,12 +1,18 @@
 import 'dart:async';
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_spinning_wheel/flutter_spinning_wheel.dart';
 import 'package:hackproject/pages/baby.dart';
 import 'package:hackproject/pages/misc.dart';
 
+/*
+This is the homepage for our application,
+uses an external package flutter_spinning_wheel
+The user will hit the spin! button to spin the wheel, then hit Go
+button to re-direct to the question page. The user can always track their growth
+by hitting the progress bar.
+ */
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 

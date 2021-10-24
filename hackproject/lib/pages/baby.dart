@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+// this page displays the growth of the baby
 class Baby extends StatefulWidget {
   const Baby({Key? key}) : super(key: key);
-
   @override
   _BabyState createState() => _BabyState();
 }

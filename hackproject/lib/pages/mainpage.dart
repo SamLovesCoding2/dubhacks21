@@ -15,6 +15,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  _WheelState w = new _WheelState();
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
@@ -47,47 +48,7 @@ class _MainPageState extends State<MainPage> {
                       style: TextStyle(color: Color(0xffFFFFFF), fontSize: 40),
                     ),
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    margin: const EdgeInsets.only(bottom: 30),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Baby(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: 150,
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(30),
-                          ),
-                          border: Border.all(
-                            color: const Color(0xffFFFFFF),
-                            width: 2,
-                          ),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color(0xffFFFFFF),
-                                offset: Offset(0, 3),
-                                blurRadius: 5,
-                                spreadRadius: 0)
-                          ],
-                          color: const Color(0xffF3CFCF),
-                        ),
-                        child: const Text(
-                          "SPIN!",
-                          style:
-                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
-                        ),
-                      ),
-                    ),
-                  ),
+                  const Wheel(),
                   Container(
                     alignment: Alignment.center,
                     margin: const EdgeInsets.only(bottom: 30),
@@ -189,8 +150,10 @@ class Wheel extends StatefulWidget {
 class _WheelState extends State<Wheel> {
   double _randomAngle() => Random().nextDouble() * pi * 2;
   double _randomVelocity() => (Random().nextDouble() * 6000) + 2000;
-
+  int index = -1;
+  // ignore close_sinks
   final StreamController _dividerController = StreamController<int>();
+  // ignore close_sinks
   final StreamController _wheelNotifier = StreamController<double>();
   @override
   void dispose() {
@@ -200,30 +163,76 @@ class _WheelState extends State<Wheel> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500,
-      height: 500,
-      alignment: Alignment.center,
-      child: Scaffold(
-        body: Column(
-          children: [
-            SpinningWheel(
-              Image.asset('assets/spinner.png'),
-              width: 500,
-              height: 500,
-              initialSpinAngle: _randomAngle(),
-              canInteractWhileSpinning: false,
-              shouldStartOrStop: _wheelNotifier.stream,
-              spinResistance: 0.2,
-              dividers: 10,
-              onEnd: _dividerController.add,
-              onUpdate: _dividerController.add,
-            ),
-            // StreamBuilder(
-            //     stream: _dividerController.stream,
-            //     builder: (c, s) {
-            //       return s.hasData ? DisplayResult(s.data) : Container();
-            //     })
-          ],
+      width: 360,
+      height: 600,
+      child: Center(
+        child: Scaffold(
+          backgroundColor: const Color(0xffD37373),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              AbsorbPointer(
+                absorbing: true,
+                child: SpinningWheel(
+                  Image.asset('assets/spinner.png'),
+                  width: 350,
+                  height: 350,
+                  initialSpinAngle: _randomAngle(),
+                  canInteractWhileSpinning: false,
+                  shouldStartOrStop: _wheelNotifier.stream,
+                  spinResistance: 0.2,
+                  dividers: 10,
+                  onEnd: _dividerController.add,
+                  onUpdate: _dividerController.add,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 20),
+                child: StreamBuilder(
+                  stream: _dividerController.stream,
+                  builder: (c, s) {
+                    index = int.parse(s.data.toString());
+                    return s.hasData
+                        ? DisplayResult(int.parse(s.data.toString()))
+                        : Container();
+                  },
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                margin: const EdgeInsets.only(top: 100, bottom: 30),
+                child: MaterialButton(
+                  onPressed: () => _wheelNotifier.sink.add(_randomVelocity()),
+                  child: Container(
+                    width: 150,
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                      border: Border.all(
+                        color: const Color(0xffFFFFFF),
+                        width: 2,
+                      ),
+                      boxShadow: const [
+                        BoxShadow(
+                            color: Color(0xffFFFFFF),
+                            offset: Offset(0, 3),
+                            blurRadius: 5,
+                            spreadRadius: 0)
+                      ],
+                      color: const Color(0xffF3CFCF),
+                    ),
+                    child: const Text(
+                      "SPIN!",
+                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -231,10 +240,26 @@ class _WheelState extends State<Wheel> {
 }
 
 class DisplayResult extends StatelessWidget {
-  const DisplayResult({Key? key}) : super(key: key);
+  final int selected;
+  DisplayResult(this.selected, {Key? key}) : super(key: key);
+  final Map<int, String> labels = {
+    1: 'Money',
+    2: 'Cook',
+    3: 'Misc.',
+    4: 'Car Care',
+    5: 'Sustainability',
+    6: 'Self-care',
+    7: 'First-aid',
+    8: 'friends',
+    9: 'insurance',
+    10: 'career',
+  };
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Text(
+      '${labels[selected]}',
+      style: const TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+    );
   }
 }

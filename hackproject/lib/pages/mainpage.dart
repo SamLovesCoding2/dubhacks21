@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_spinning_wheel/flutter_spinning_wheel.dart';
@@ -184,6 +187,16 @@ class Wheel extends StatefulWidget {
 }
 
 class _WheelState extends State<Wheel> {
+  double _randomAngle() => Random().nextDouble() * pi * 2;
+  double _randomVelocity() => (Random().nextDouble() * 6000) + 2000;
+
+  final StreamController _dividerController = StreamController<int>();
+  final StreamController _wheelNotifier = StreamController<double>();
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -191,10 +204,37 @@ class _WheelState extends State<Wheel> {
       height: 500,
       alignment: Alignment.center,
       child: Scaffold(
-        body: SpinningWheel(
-          Image.asset('assets/spinner.png'),
+        body: Column(
+          children: [
+            SpinningWheel(
+              Image.asset('assets/spinner.png'),
+              width: 500,
+              height: 500,
+              initialSpinAngle: _randomAngle(),
+              canInteractWhileSpinning: false,
+              shouldStartOrStop: _wheelNotifier.stream,
+              spinResistance: 0.2,
+              dividers: 10,
+              onEnd: _dividerController.add,
+              onUpdate: _dividerController.add,
+            ),
+            // StreamBuilder(
+            //     stream: _dividerController.stream,
+            //     builder: (c, s) {
+            //       return s.hasData ? DisplayResult(s.data) : Container();
+            //     })
+          ],
         ),
       ),
     );
+  }
+}
+
+class DisplayResult extends StatelessWidget {
+  const DisplayResult({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

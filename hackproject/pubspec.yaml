@@ -54,20 +54,16 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  assets:
-<<<<<<< HEAD
-    - assets/spinner.png
   uses-material-design: true
-=======
-    - lib/assets/spinner.png
-    - lib/assets/blankoldest.png
-    - lib/assets/blankold.png
-    - lib/assets/blankadult.png
-    - lib/assets/blankteenager.png
-    - lib/assets/Baby_2.png
-    - lib/assets/childhalff_1.png
-    - lib/assets/blankchild.png
->>>>>>> ae5e4dbf37226ffa070716a745e4585674a7bcf7
+  assets:
+    - assets/spinner.png
+    - assets/blankoldest.png
+    - assets/blankold.png
+    - assets/blankadult.png
+    - assets/blankteenager.png
+    - assets/Baby_2.png
+    - assets/childhalff_1.png
+    - assets/blankchild.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

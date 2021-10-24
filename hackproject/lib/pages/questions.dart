@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_spinning_wheel/flutter_spinning_wheel.dart';
 import 'package:hackproject/pages/baby.dart';
-import 'package:hackproject/pages/questions.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class MiscQuestion extends StatefulWidget {
+  const MiscQuestion({Key? key}) : super(key: key);
 
   @override
-  _MainPageState createState() => _MainPageState();
+  _MiscQuestionState createState() => _MiscQuestionState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MiscQuestionState extends State<MiscQuestion> {
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
@@ -40,13 +37,27 @@ class _MainPageState extends State<MainPage> {
                     alignment: Alignment.center,
                     margin: const EdgeInsets.only(top: 30, bottom: 50),
                     child: const Text(
-                      "THE TITLE",
-                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 40),
+                      "Miscellaneous",
+                      style: TextStyle(
+                          color: Color(0xffFFFFFF),
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
                     alignment: Alignment.center,
-                    margin: const EdgeInsets.only(bottom: 30),
+                    margin: const EdgeInsets.only(top: 30, bottom: 50),
+                    child: const Text(
+                      "Which national elections should you vote in?",
+                      style: TextStyle(
+                          color: Color(0xffFFFFFF),
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(
@@ -57,7 +68,7 @@ class _MainPageState extends State<MainPage> {
                         );
                       },
                       child: Container(
-                        width: 150,
+                        width: 170,
                         alignment: Alignment.center,
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
@@ -68,17 +79,10 @@ class _MainPageState extends State<MainPage> {
                             color: const Color(0xffFFFFFF),
                             width: 2,
                           ),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color(0xffFFFFFF),
-                                offset: Offset(0, 3),
-                                blurRadius: 5,
-                                spreadRadius: 0)
-                          ],
-                          color: const Color(0xffF3CFCF),
+                          color: const Color(0xffD0CFF3),
                         ),
                         child: const Text(
-                          "SPIN!",
+                          "Choice 1",
                           style:
                               TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
                         ),
@@ -87,47 +91,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                   Container(
                     alignment: Alignment.center,
-                    margin: const EdgeInsets.only(bottom: 30),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const MiscQuestion(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: 150,
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(30),
-                          ),
-                          border: Border.all(
-                            color: const Color(0xffFFFFFF),
-                            width: 2,
-                          ),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color(0xffFFFFFF),
-                                offset: Offset(0, 3),
-                                blurRadius: 5,
-                                spreadRadius: 0)
-                          ],
-                          color: const Color(0xffF3CFCF),
-                        ),
-                        child: const Text(
-                          "Go",
-                          style:
-                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(
@@ -138,7 +102,7 @@ class _MainPageState extends State<MainPage> {
                         );
                       },
                       child: Container(
-                        width: 150,
+                        width: 170,
                         alignment: Alignment.center,
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
@@ -149,19 +113,117 @@ class _MainPageState extends State<MainPage> {
                             color: const Color(0xffFFFFFF),
                             width: 2,
                           ),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color(0xffFFFFFF),
-                                offset: Offset(0, 3),
-                                blurRadius: 5,
-                                spreadRadius: 0)
-                          ],
+                          color: const Color(0xffD0F3CF),
+                        ),
+                        child: const Text(
+                          "Choice 2",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 170,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
+                          color: const Color(0xffF3EDCF),
+                        ),
+                        child: const Text(
+                          "Choice 3",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 170,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
+                          color: const Color(0xffF3CFEB),
+                        ),
+                        child: const Text(
+                          "Choice 4",
+                          style:
+                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 50, bottom: 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Baby(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 130,
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                          border: Border.all(
+                            color: const Color(0xffFFFFFF),
+                            width: 2,
+                          ),
                           color: const Color(0xffF3CFCF),
                         ),
                         child: const Text(
-                          "Progress",
-                          style:
-                              TextStyle(color: Color(0xffFFFFFF), fontSize: 15),
+                          "Submit",
+                          style: TextStyle(
+                              color: Color(0xffFFFFFF),
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Roboto'),
                         ),
                       ),
                     ),
@@ -170,29 +232,6 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class Wheel extends StatefulWidget {
-  const Wheel({Key? key}) : super(key: key);
-
-  @override
-  _WheelState createState() => _WheelState();
-}
-
-class _WheelState extends State<Wheel> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 500,
-      height: 500,
-      alignment: Alignment.center,
-      child: Scaffold(
-        body: SpinningWheel(
-          Image.asset('assets/spinner.png'),
         ),
       ),
     );
